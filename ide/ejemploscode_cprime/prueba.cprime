@@ -1,0 +1,9 @@
+star
+
+int variable = 1; # comentario
+IF ( hola < jola ) {
+int variable = 1; # comentario
+}
+print ( hola );
+
+end

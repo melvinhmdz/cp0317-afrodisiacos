@@ -1,0 +1,50 @@
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe.config
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.pdb
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csprojResolveAssemblyReference.cache
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.RadForm1.resources
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.Properties.Resources.resources
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.GenerateResource.Cache
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe.licenses
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.CoreCompileInputs.cache
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.pdb
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.AboutBox1.resources
+C:\Users\nicole zelada\source\repos\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.anLexico.resources
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe.config
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.pdb
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.pdb
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csprojResolveAssemblyReference.cache
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.AboutBox1.resources
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.anLexico.resources
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.RadForm1.resources
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.Properties.Resources.resources
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.GenerateResource.Cache
+C:\Users\mel_e\Downloads\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe.licenses
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe.config
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.pdb
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.pdb
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csprojResolveAssemblyReference.cache
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.AboutBox1.resources
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.anLexico.resources
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.RadForm1.resources
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.Properties.Resources.resources
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.GenerateResource.Cache
+C:\Users\mel_e\Desktop\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe.licenses
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe.config
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.exe
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\bin\Debug\CPRIME_IDE_v2.pdb
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csprojResolveAssemblyReference.cache
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.AboutBox1.resources
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.anLexico.resources
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.RadForm1.resources
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.Properties.Resources.resources
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.GenerateResource.Cache
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe.licenses
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.csproj.CoreCompileInputs.cache
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.exe
+C:\Users\nicole zelada\Downloads\COMPI_ANALIZADOR\COMPI_ANALIZADOR\ide\CPRIME IDE v2\CPRIME IDE v2\obj\x86\Debug\CPRIME_IDE_v2.pdb
