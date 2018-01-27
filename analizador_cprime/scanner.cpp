@@ -31,12 +31,8 @@ void obtoken()
 
  //quitar blancos, caracter de cambio de l�nea y tabuladores
  while (ch==' ' || ch=='\n' || ch=='\t') ch=obtch() ;
- if(ch=='#'){
-  printf("comentario | %c | %d,%d \n",ch,num_linea,offset+1);
-  offset=ll-1;
-  obtch();
- }
- if(ch=='|'){
+  
+ if (ch=='|'){
   obtch();
   if(ch=='#'){
        while(ch != '#'){
@@ -47,33 +43,32 @@ void obtoken()
   offset=ll-1;
   
  }
-
  //si la lexeme comienza con una letra, es identificador o palabra reservada
- if (isalpha(ch)) {
+  if (isalpha(ch)) {
     lexid[0]=ch;
     i=1;
     while ( isalpha( (ch=obtch()) ) ||  isdigit(ch)   ) 
       if (i<MAXID) lexid[i++]=ch;
     lexid[i]='\0';
-  
     //�es identificador o palabra reservada?.buscar en la tabla de palabras reservadas
-	//una b�squeda lineal que tendr� que ser sustitu�da por otro tipo de b�squeda m�s efectiva. 
-	//...en esa nueva b�squeda desaparecer� el "break"
-    for (j=0;j<MAXPAL;++j) 
-        if (strcmp(lexid,lexpal[j])==0) {
-	       ok=1;
-	       break;
-        }
+  //una b�squeda lineal que tendr� que ser sustitu�da por otro tipo de b�squeda m�s efectiva. 
+  //...en esa nueva b�squeda desaparecer� el "break"
+    for (j=0;j<MAXPAL;++j){ 
+  //             printf("\n@@%s - %s@@\n",lexid,lexpal[j]);
+      if (strcmp(lexid,lexpal[j])==0) {
+         ok=1;
+         break;
+      }
+    }
     //printf("-> %d\n",j);
     if (ok==1) 
        token=tokpal[j]; //es palabra reservada
     else
        token=ident; //es identificador
- 
+
     strcpy(lex,lexid); //copiar en lex
- }
- else //si comienza con un d�gito...
-    if (isdigit(ch)) {
+  }
+  else if (isdigit(ch)) { //si comienza con un d�gito...
        lexid[0]=ch;
        i=j=1;
        while ( isdigit( (ch=obtch()))) {
@@ -85,52 +80,57 @@ void obtoken()
           error(30); //este n�mero es demasiado grande
        token=numero;
        valor=atol(lexid); //valor num�rico de una lexeme correspondiene a un n�mero	        
-    }
-    else //reconocimiento de s�mbolos especiales, incluyendo pares de simbolos (aplicamos "lookahead symbol technique")
-    {
-        lexid[0]=ch;
-        switch(ch)
-        {
-            case '<':
-                ch = obtch();
-                if(ch == '=')
-                {
-                    token=mei;
-                    ch=obtch();
-                }else ch = mnr;
-                break;
-                
-            case '>':
-                ch = obtch();
-                if(ch == '=')
-                {
-                    token=mai;
-                    ch=obtch();
-                }else ch = myr;
-                break;
+  }
+  else {//reconocimiento de s�mbolos especiales, incluyendo pares de simbolos (aplicamos "lookahead symbol technique")   
+      lexid[0]=ch;
+      switch(ch)
+      {
+        case '#':
+            printf("comentario | %c | %d,%d \n",ch,num_linea,offset+1);
+            offset=ll-1;
+            ch = obtch();
+            break;
+
+        case '<':
+            ch = obtch();
+            if(ch == '=')
+            {
+                token=mei;
+                ch=obtch();
+            }else token = mnr;
+            break;
             
-            case '=':
-                ch = obtch();
-                if(ch == '=')
-                {
-                    token=comp;
-                    ch=obtch();
-                }else ch = igl;
-                break;
-            case '!':
-                ch = obtch();
-                if(ch == '=')
-                {
-                    token=dist;
-                    ch=obtch();
-                }else ch = nulo;
-                break;
-            default:
-                token=espec[ch];
-                ch= obtch();
-                break;
-        }
-    }
+        case '>':
+            ch = obtch();
+            if(ch == '=')
+            {
+                token=mai;
+                ch=obtch();
+            }else token = myr;
+            break;
+        
+        case '=':
+            ch = obtch();
+            if(ch == '=')
+            {
+                token=comp;
+                ch=obtch();
+            }else token = igl;
+            break;
+        case '!':
+            ch = obtch();
+            if(ch == '=')
+            {
+                token=dist;
+                ch=obtch();
+            }else token = nulo;
+            break;
+        default:
+            token=espec[ch];
+            ch= obtch();
+            break;
+      }
+  }
 }
 
 //obtch: obtiene el siguiente caracter del programa fuente

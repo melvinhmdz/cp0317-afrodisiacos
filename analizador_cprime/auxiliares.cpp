@@ -41,7 +41,7 @@ void inicializar_espec()
 void imprime_token()
 {
 
- char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok"};
- printf("%10s",token_string[token]);
+ char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok","printtok","readtok"};
+ printf("%10s %d",token_string[token],token);
   
 }
