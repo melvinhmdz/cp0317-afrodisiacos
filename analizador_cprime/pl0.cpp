@@ -22,7 +22,7 @@ int main (int argc,char *argv[]) {
 	if (fp==NULL) 
 	   printf("\nNo se encontro el programa fuente indicado");
 	else {
-	     printf("\n\nAnalizador lexicografico CPRIME  \n");
+	     //printf("\n\nAnalizador lexicografico CPRIME  \n");
 	     //inicializacion de tokens de s�mbolos especiales (en auxiliares.cpp)
 	     inicializar_espec() ; 
 
