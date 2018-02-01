@@ -17,7 +17,7 @@ int ch;                   //último caracter leído
 char lex[MAXID+1];        //último lexeme leído ( +1 para colocar "\0")
 long int valor ;          //valor numérico de una lexeme correspondiene a un número
 bool com=false;
-int num_linea;            //Numero de linea
+int num_linea=0;            //Numero de linea
 int flag_leido;
 char lexid[MAXID + 1];
 //variable donde guardara la cadena
@@ -92,8 +92,10 @@ if (ch=='|'){
                              hayCadena = false;
                      }
                      ch = obtch();
-                     if(ch != '"' && ch != ')')
+                     if(ch != '"' && ch != ';' && ch != ')')
                              lexid[i++] = ch;
+                             
+                     
              }
 	 }
 	 else // Si comienza con un dígito debe ser un número.
@@ -189,7 +191,7 @@ if (ch=='|'){
                                 ch = obtch();
                                 if(ch == '=')
                                 {
-                                    token = igl;
+                                    token = comp;
                                     lexid[1] = '=';
                                     lexid[2] = '\0';
                                     ch = obtch();
@@ -209,6 +211,37 @@ if (ch=='|'){
                                     token = nulo;
                             break;
                             
+                            case '@':
+                                ch = obtch();
+                                if(ch=='C')
+                                {
+                                    token = readcar;
+                                    lexid[1] = 'c';
+                                    lexid[2] = '\0';
+                                    ch = obtch();
+                                }
+                                if(ch=='S')
+                                {
+                                    token = readcad;
+                                    lexid[1] = 's';
+                                    lexid[2] = '\0';
+                                    ch = obtch();
+                                }
+                                if(ch=='I')
+                                {
+                                    token = readint;
+                                    lexid[1] = 'i';
+                                    lexid[2] = '\0';
+                                   ch = obtch();
+                                }
+                                if(ch=='F')
+                                {
+                                    token = readfloat;
+                                    lexid[1] = 'f';
+                                    lexid[2] = '\0';
+                                    ch = obtch();
+                                }
+                            break;
                             
                             default:
                                 token = espec[ch]; //hashing directo en la tabla de tokens de símbolos especiales del lenguaje
@@ -267,31 +300,3 @@ int getline(char s[],int lim)
  num_linea++;
  return (i);
 }
-/*
-//funcion para ver si es comentarios
-bool ver_comentario(int cC)
-{
-
-  if(cC=='#' && !com)
-  {
-    com=true;
-    return true;
-  }
-  else if(com){
-    if(cC != '#' && com)
-    {
-    return true;
-    }
-    else
-    {
-    if(cC == '#' && com)
-    {
-        com=false;
-        return true;
-    }
-                  
-    }
-  }
-  else
-    return false;
-}*/

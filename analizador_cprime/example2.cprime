@@ -1,0 +1,13 @@
+start
+
+public class Nombre{
+
+    String nom = "mel";
+    int ed = 22;
+    float peso = 146.1;
+    
+    CUTDECIMA(146.1);
+}
+
+
+end
