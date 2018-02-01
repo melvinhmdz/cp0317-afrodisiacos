@@ -7,7 +7,7 @@ char *lexpal[MAXPAL]={"START", "END", "PUBLIC", "CLASS", "IF", "ELSE", "SWITCH",
 enum simbolo token;
 
 //se define e inicializa la tabla de tokens de palabras reservadas
-enum simbolo tokpal [MAXPAL]={starttok,endtok,publictok,classtok,iftok,elsetok,switchtok,casetok,defaulttok,breaktok,whiletok,fortok,inttok,floattok,stringtok,chartok,booltok,falsetok,truetok,controltok,steptok,newtok,exctok,printtok,readtok,cadenatok,accmetodo,vstring,strlng,searchc,replace,parsef,parimpar,vint,vfloat,cutdecimal,aproxcut,partdec,potencia ,seno,coseno,tangente,pi,factorial,raizcuad,combinacion,permutacion,residuodiv,vabsoluto};
+enum simbolo tokpal [MAXPAL]={starttok,endtok,publictok,classtok,iftok,elsetok,switchtok,casetok,defaulttok,breaktok,whiletok,fortok,inttok,floattok,stringtok,chartok,booltok,falsetok,truetok,controltok,steptok,newtok,exctok,printtok,readtok,cadenatok,accmetodo,vstringtok,strlngtok,searchctok,replacetok,parseftok,parimpartok,vinttok,vfloattok,cutdecimaltok,aproxcuttok,partdectok,potenciatok,senotok,cosenotok,tangentetok,pitok,factorialtok,raizcuadtok,combinaciontok,permutaciontok,residuodivtok,vabsolutotok};
 
 //tabla de tokens correspondientes a operadores y s�mbolos especiales
 enum simbolo espec[255] ;

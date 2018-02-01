@@ -41,7 +41,7 @@ void inicializar_espec()
 void imprime_token()
 {
 
- char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok","printtok","readtok","cadenatok","accmetodo","vstring","strlng","searchc","replace","parsef","parimpar","vint","vfloat","cutdecimal","aproxcut","partdec","potencia" ,"seno","coseno","tangente","pi","factorial","raizcuad","combinacion","permutacion","residuodiv","vabsoluto"};
+ char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","readcar","readcad","readint","readfloat","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok","printtok","readtok","cadenatok","accmetodo","vstringtok","strlngtok","searchctok","replacetok","parseftok","parimpartok","vinttok","vfloattok","cutdecimaltok","aproxcuttok","partdectok","potenciatok","senotok","cosenotok","tangentetok","pitok","factorialtok","raizcuadtok","combinaciontok","permutaciontok","residuodivtok","vabsolutotok"};
  printf("%10s %d",token_string[token],token);
   
 }
