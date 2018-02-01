@@ -92,8 +92,10 @@ if (ch=='|'){
                              hayCadena = false;
                      }
                      ch = obtch();
-                     if(ch != '"' && ch != ')')
+                     if(ch != '"' && ch != ';')
                              lexid[i++] = ch;
+                             
+                     
              }
 	 }
 	 else // Si comienza con un dígito debe ser un número.
@@ -267,31 +269,3 @@ int getline(char s[],int lim)
  num_linea++;
  return (i);
 }
-/*
-//funcion para ver si es comentarios
-bool ver_comentario(int cC)
-{
-
-  if(cC=='#' && !com)
-  {
-    com=true;
-    return true;
-  }
-  else if(com){
-    if(cC != '#' && com)
-    {
-    return true;
-    }
-    else
-    {
-    if(cC == '#' && com)
-    {
-        com=false;
-        return true;
-    }
-                  
-    }
-  }
-  else
-    return false;
-}*/
