@@ -36,22 +36,23 @@ void obtoken()
 
  // Quitar blancos, caracter de cambio de línea y tabuladores
  while (ch==' ' || ch=='\n' || ch=='\t' || ch=='\r') ch=obtch() ; // Recordar que ch se inicializa con espacio.
- /*
+
  if(ch == '#'){
-     ch=obtch() ;
-     if(ch == '|')
-         ch=obtch() ;
- }*/
- if(ch == '#'){
-     ch=obtch() ;
-     if(ch == '|')
-         while(ch != '|' && (ch = obtch()) != '#' )
-             ch=obtch() ;
+    ch=obtch();
+    if(ch == '|')
+    {
+        while(1){
+            ch=obtch();
+            if(ch == '|')
+            {
+                ch=obtch();
+                if(ch=='#')break;
+            }
+        };
+    }
              
  }
- 
- // Si el lexeme comienza con una letra, es identificador o palabra reservada.
- if (isalpha(ch)) {
+ else if (isalpha(ch)) {  // Si el lexeme comienza con una letra, es identificador o palabra reservada.
     lexid[0]=ch;
     i=1;
     while ( isalpha( (ch=obtch()) ) ||  isdigit(ch)   ) // Se extrae un lexema.
