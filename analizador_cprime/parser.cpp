@@ -26,11 +26,11 @@ void programa(){
         if(token == ident){
             obtoken();
             if(token == llavea){
-                //obtoken();
+                obtoken();
                 CUERPO();
                 if(token == llaveac){
-                    printf("\nPROGRAMA SINTACTICAMENTE CORRECTO \n\n\n");
-                    exit(1);
+                    printf("\nPROGRAMA SINTACTICAMENTE CORRECTO ;) \n\n\n");
+                    //exit(1);
                 }
                 else error(4);
             }else error(4);
@@ -47,7 +47,7 @@ void TIPO_ACCESO(){
 
 void CUERPO(){
  //   TIPO_ACCESO();
-obtoken();    
+//obtoken();    
 if(token == publictok){
     obtoken();
     if(token == inttok){
@@ -56,84 +56,104 @@ if(token == publictok){
             obtoken();
             if(token == parena){
                 obtoken();
-               // DEC_VAR();
+              
                 if(token == parenc){
                     obtoken();
                     if(token == llavea){
                         obtoken();
+                        //DEC_ATRIBUTO();
                         INSTRUCCION();
+                        while(token != llaveac){
+                            //obtoken();
+                            INSTRUCCION();
+                        }
                         if(token == llaveac){
+                            printf("final } de main() \n");
                             obtoken();
-                           // exit(1);
                         }else error(4);
                     }else error(4);
-                }else error(5);
+                }else error(4);
             }else error(5);
-        }else error(2);
-    }
-}        
+        }else error(5);
+    }else error(2);
 }
+}        
 
-void DEC_VAR(){
-    
-   /* if(token == nulo || token == parenc)
-        exit(1);
-   */ 
-    if(token == ident || token == inttok || token == floattok || token == stringtok || token == booltok || token == chartok){
+/*
+void DEC_VAR_METODOS(){
+    //if(token == ident || token == inttok || token == floattok || token == stringtok || token == booltok || token == chartok){
+    TIPO();
+    if(token == ident){
         obtoken();
-        if(token == ident){
+        if(token == coma){
             obtoken();
-            while(token == coma){
-                obtoken();
-                DEC_VAR();
-            }
+            DEC_VAR_METODOS();
         }
-    }
+    }else error(2);
+    
+}
+  */  
+void DEC_ATRIBUTO(){
+    //if(token == ident || token == inttok || token == floattok || token == stringtok || token == booltok || token == chartok){
+    TIPO();
+    if(token == ident){
+        obtoken();
+        if(token == puntoycoma){
+            obtoken();
+           // DEC_ATRIBUTO(); //pensar recursion
+        }
+        
+    }else error(2);
 }
 
 void INSTRUCCION(){
-   
-   // obtoken();
-    if(token == nulo){
-        exit(0);
-    }
+    
+    if(token == iftok){
         IF();
-        WHILE();
-        FOR();
-        SWITCH();
-        PRINT();
-    
-   // EXPRESION();
-    
-    printf("hola prueb\n");
-    
-    /* if(token == nulo || token == llaveac)
-        
-        exit(0);
-*/}
-
+    }
+    else{
+        if(token == whiletok)
+            WHILE();
+        else
+            if(token == fortok)
+                FOR();
+            else
+                if(token == switchtok)
+                    SWITCH();
+                else
+                    if(token == printtok)
+                        PRINT();
+                    else
+                        if(token == nulo)
+                            nulo;
+                        else
+                            if(token == asignacion)
+                                ASIGNACION();
+                        //else
+                          //  if(token == objetotok) 
+    }  
+  //  printf("hola prueb\n");    
+}
 
 void TIPO(){
-   // obtoken();
-    
+   // obtoken(); 
     if(token == ident){
         obtoken();
-    }
-    if(token == inttok){
-        obtoken();
-    }
-    if(token == floattok){
-        obtoken();
-    }
-    if(token == stringtok){
-        obtoken();
-    }
-    if(token == booltok){
-        obtoken();
-    }
-    if(token == chartok){
-        obtoken();
-    }  
+    }else
+        if(token == inttok)
+            obtoken();
+        else
+            if(token == floattok)
+                obtoken();
+            else
+                if(token == stringtok)
+                    obtoken();
+                else
+                    if(token == booltok)
+                        obtoken();
+                    else
+                        if(token == chartok)
+                            obtoken();      
 }
 
 void CONSTRUCTOR(){
@@ -146,7 +166,7 @@ void CONSTRUCTOR(){
                 obtoken();
                 if(token == parena){
                     obtoken();
-                    DEC_VAR();
+                    //DEC_VAR_METODOS();
                     if(token == parenc){
                         obtoken();
                         if(token == llavea){
@@ -168,7 +188,7 @@ void IF(){
         obtoken();
         if(token == parena){
             obtoken();
-          //  CONDICION();
+            CONDICION();
             if(token == parenc){
                 obtoken();
                 if(token == llavea){
@@ -178,17 +198,14 @@ void IF(){
                         obtoken();
                         INSTRUCCION();
                     }
-                   /* 
-                    if(token != nulo){                 //no seguro
+                    if(token == llaveac){
+                        printf("final }if \n");
                         obtoken();
-                        //INSTRUCCION(); //mandar a llamar mas IF
-                    }*/
-                    
-                    obtoken();
                         if(token == elsetok){
                             ELSE();
-                        }else error(10);
-                    
+                        }
+                                                
+                    }else error(4);                                        
                 }else error(4);
             }else error(5);
         }else error(5);
@@ -205,6 +222,7 @@ void ELSE(){
                 obtoken();
                 INSTRUCCION();
             }if(token == llaveac){
+                printf("final }else \n");
                 obtoken();
             }else error(5);       //falto llave
         }else error(5);
@@ -226,6 +244,7 @@ void WHILE(){
                         obtoken();
                         INSTRUCCION();
                     }if(token == llaveac){
+                        printf("final } while()\n");
                         obtoken();
                     }else error(4);       //falto llave
                 }else error(4);
@@ -286,7 +305,7 @@ void FOR(){
 }
     
 
-void SWITCH(){    
+void SWITCH(){    //pendiente
     if(token == switchtok){
         obtoken();
         if(token == parena){
@@ -346,113 +365,150 @@ void SWITCH(){
     }else error(28);//no encontro un parentesis abierto 
 } 
 
+
 void ASIGNACION(){
-    if(token == ident){
+    
+    if(token == asignacion){
         obtoken();
-        if(token == igl){
-            obtoken();
-            EXPRESION();
-        }else error(3);//no se encontro un signo =
-    }else error(2);//no se encontro un identificador    
-}
-
-void PARAMETROS(){
-    if(token == nulo){
-        exit(0);
-    }
-    else{
         if(token == ident){
             obtoken();
-    }
-    else{
-        if(token == ident){
-            obtoken();
-            while(token == coma){
-                PARAMETROS();
-            }
-            if(token == ident){
+            if(token == igl){
                 obtoken();
-            }
-            else error(2);
-        }else error(2);//no se encontro un ident
-        
-        }
+                EXPRESION();
+            }else error(3);//no se encontro un signo =
+        }else error(2);//no se encontro un identificador    
     }
 }
 
-void OBJETO(){               //REVISAR BIEN
+void OBJETO(){
+//    obtoken();
     if(token == ident){
         obtoken();
         if(token == ident){
             obtoken();
             if(token == igl){
+                obtoken();
                 if(token == newtok){
                     obtoken();
                     if(token == ident){
                         obtoken();
-                        
-                        while(token != parenc){
+                        if(token == parena){
+                            obtoken();
+                            if(token == parenc){
+                                obtoken();
+                                if(token == puntoycoma){
+                                    printf("final del ; del OBJETO\n");
+                                    obtoken();
+                                    
+                                }else error(1);    
+                            }else error(5);    
                             
-                        }    
-                        
-                    }
+                            /*while(token != parenc){
+                                
+                            }*/
+
+                        }else error(5);
+                    }else error(2);
                 }else error(7);
             }else error(3);
         }else error(2);
-    }else error(8);
+    }else error(2);
 }
 
 void CONDICION(){
+    
     EXPRESION();
-    obtoken();
     COMPARACION();
-    obtoken();
     EXPRESION();
-    obtoken();
+    
 }
 
 
 void COMPARACION(){
    // obtoken();
-    if(token == mai)
-        obtoken();
-   
-    if(token == mei)
-        obtoken();
     
-    if(token == myr)
+    if(token == mai){
+        printf(">= \n");
         obtoken();
-    
-    if(token == mnr)
-        obtoken();
-    
-    if(token == dist)
-        obtoken();
-    
-    if(token == comp)
-        obtoken();
-      
+    }else{
+        if(token == mei){
+            printf("<= \n");
+            obtoken();
+        }else
+            if(token == myr)
+                obtoken();
+            else
+                if(token == mnr)
+                obtoken();
+                else
+                    if(token == dist)
+                        obtoken();
+                    else
+                        if(token == comp)
+                            obtoken();
+                        else error(32);
+    }  
 }
 
 void EXPRESION(){
-    EXPNUMERICA();
+     
+    if (token==mas || token==menos) {
+        obtoken(); // Siempre se pone en el siguiente token (un token adelantado) para analizarlo al salir de aquí. Al entrar a la siguiente función solo se pregunta, no se lee uno.
+        TERMINO();
+    }
+    else{    
+        TERMINO();
+        while(token == mas || token == menos){
+            printf("+ o - \n");
+            obtoken();
+            TERMINO();
+        }
+    }
+
 }
 
-void EXPNUMERICA(){
-    obtoken();
-    EXPARITMETICA();
-    obtoken();
-    COMPARACION();
+void TERMINO(){
     
- //   TERMINO();
-    
+    if(token == por || token == barra){
+        printf("* o / \n");
+        obtoken();
+        FACTOR();
+    }
+    else{
+        FACTOR();   
+
+        while(token == por || token == barra){
+            printf("* o / \n");
+            obtoken();
+            FACTOR();
+        }
+    }
 }
 
-void EXPARITMETICA(){
-    
-    
+void FACTOR(){
+    if(token == ident){
+        printf("ident \n");
+        obtoken();
+    }
+    else{
+        if(token == numero){
+            printf("numero\n");
+            obtoken();
+        }
+        else{
+            if(token == parena){
+                printf("( \n");        
+                obtoken();
+                EXPRESION();
+                if(token == parenc){
+                    printf(") \n");
+                    obtoken();
+                }else error(5); 
+            }else error(5);
+        }   
+   }    
 }
-
+/*
 void FORMATOW(){
     if(token == comillad){
         obtoken();
@@ -464,20 +520,29 @@ void FORMATOW(){
         }else error(31);
     }else error(29);
 }
-
+*/
 void PRINT(){
     if(token == printtok){
         obtoken();
         if(token == parena){
             obtoken();
-            FORMATOW();
-            if(token == parenc){
-                obtoken();
-                if(token == puntoycoma){
+            //if(token == comillad){
+            //    obtoken();
+                if(token == comillad || token == cadenatok){
                     obtoken();
-                }
-            }
-        }
-    }
+                    //if(token == comillad){
+                    //    obtoken();
+                        if(token == parenc){
+                            obtoken();
+                            if(token == puntoycoma){
+                                printf("final de ; print()\n");
+                                obtoken();
+                            }else error(1);
+                        }else error(5);
+                   // }else error(34);
+                }else error(31);
+           // }else error(34);
+        }else error(5);
+    }else error(35);
 }
 
