@@ -36,16 +36,18 @@ void obtoken()
 
  // Quitar blancos, caracter de cambio de línea y tabuladores
  while (ch==' ' || ch=='\n' || ch=='\t' || ch=='\r') ch=obtch() ; // Recordar que ch se inicializa con espacio.
-if (ch=='|'){
-  obtch();
-  if(ch=='#'){
-       while(ch != '#'){
-        ch=obtch() ;
-       }
-  }
-  //printf("comentario | %c | %d,%d \n",ch,num_linea,offset+1);
-  offset=ll-1;
-  
+ /*
+ if(ch == '#'){
+     ch=obtch() ;
+     if(ch == '|')
+         ch=obtch() ;
+ }*/
+ if(ch == '#'){
+     ch=obtch() ;
+     if(ch == '|')
+         while(ch != '|' && (ch = obtch()) != '#' )
+             ch=obtch() ;
+             
  }
  
  // Si el lexeme comienza con una letra, es identificador o palabra reservada.
@@ -55,10 +57,7 @@ if (ch=='|'){
     while ( isalpha( (ch=obtch()) ) ||  isdigit(ch)   ) // Se extrae un lexema.
       if (i<MAXID) lexid[i++]=ch;
     lexid[i]='\0';
-  
-    // ¿Ese lexema es identificador o palabra reservada? Buscar en la tabla de palabras reservadas
-	// una búsqueda lineal que tendrá que ser sustituída por otro tipo de búsqueda más efectiva. 
-	// En esa nueva búsqueda desaparecerá el "break".
+
     for (j=0;j<MAXPAL;++j) 
         if (strcmp(lexid,lexpal[j]) == 0) {
 	       ok = 1; // Se le asigna 1 si el palabra reservada.
@@ -143,12 +142,24 @@ if (ch=='|'){
                      lexid[0] = ch;
 			switch(ch)
                         {
-                            
+                            /*
                             case '#':
-                            //printf("comentario | %c | %d,%d \n",ch,num_linea,offset+1);
-                            offset=ll-1;
                             ch = obtch();
-                            break;
+                            if(ch == '|')
+                            {
+                                do
+                                {
+                                    ch = obtch();
+                                    
+                                }while(ch==' ' || ch=='\n' || ch=='\t' || ch=='\r');
+                                
+                            }else
+                            {
+                                token = nulo;
+                                //ch = obtch();
+                            }
+                            
+                            break;*/
                             
                             case '<':
                                 ch = obtch();
@@ -196,7 +207,7 @@ if (ch=='|'){
                                     lexid[2] = '\0';
                                     ch = obtch();
                                 }else
-                                    token = nulo;
+                                    token = igl;
                             break;
                             
                             case '!':
