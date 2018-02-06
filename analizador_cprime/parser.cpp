@@ -55,8 +55,7 @@ if(token == publictok){
         if(token == ident){
             obtoken();
             if(token == parena){
-                obtoken();
-              
+                obtoken();   
                 if(token == parenc){
                     obtoken();
                     if(token == llavea){
@@ -97,12 +96,7 @@ void DEC_ATRIBUTO(){
     //if(token == ident || token == inttok || token == floattok || token == stringtok || token == booltok || token == chartok){
     TIPO();
     if(token == ident){
-        obtoken();
-        if(token == puntoycoma){
-            obtoken();
-           // DEC_ATRIBUTO(); //pensar recursion
-        }
-        
+        obtoken(); 
     }else error(2);
 }
 
@@ -129,6 +123,10 @@ void INSTRUCCION(){
                         else
                             if(token == asignacion)
                                 ASIGNACION();
+                        else
+                            if(token == constructortok)
+                                CONSTRUCTOR();
+                                else error(36);
                         //else
                           //  if(token == objetotok) 
     }  
@@ -166,12 +164,22 @@ void CONSTRUCTOR(){
                 obtoken();
                 if(token == parena){
                     obtoken();
-                    //DEC_VAR_METODOS();
+                    while(token != parenc){
+                        DEC_ATRIBUTO();
+                        while(token==coma){
+                            obtoken();
+                            DEC_ATRIBUTO();
+                        }
+                    }
                     if(token == parenc){
                         obtoken();
                         if(token == llavea){
                             obtoken();
                             INSTRUCCION();
+                            while(token != llaveac){
+                                obtoken();
+                                INSTRUCCION();
+                            }
                             if(token == llaveac){
                                 obtoken();
                             }else error(6);
