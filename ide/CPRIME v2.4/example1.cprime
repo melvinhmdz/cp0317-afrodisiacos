@@ -1,0 +1,13 @@
+#| COMENTARIO
+LALA |#
+float valorL = 5;
+int valueI = 6;
+int valueF = 6.3;
+print("saludos");
+
+if(valueI <= valueI){
+FACTORIAL(valueI);
+}
+
+
+enddd
