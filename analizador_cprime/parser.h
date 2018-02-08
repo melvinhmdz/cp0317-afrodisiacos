@@ -1,7 +1,10 @@
 
+
 int error(int);
 
 void programa();
+void CLAS_DEF();
+void DEC_METODO_MAIN();
 void TIPO_ACCESO();
 void CUERPO();
 void DEC_VAR();
@@ -27,5 +30,7 @@ void TERMINO();
 void FACTOR();
 void DEC_VAR_METODOS();
 void DEC_ATRIBUTO();
+
+
 
 
