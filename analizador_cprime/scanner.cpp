@@ -1,4 +1,3 @@
-//el analizador lexicogr�fico de pl0
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>

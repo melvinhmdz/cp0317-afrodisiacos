@@ -53,4 +53,3 @@ char *mensaje_de_error[] = { "",
 /*Error 52*/ "la funcion POW necesita dos parametros separados por coma",
 /*Error 53*/ "se espera un identificador o cadena(entre comillas simples)",
 /*Error 54*/ "falta la comilla de cierre"};
-

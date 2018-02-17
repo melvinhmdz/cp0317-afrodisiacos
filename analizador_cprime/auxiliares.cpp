@@ -6,13 +6,13 @@
 #include "lexico.h"
 
 //error: por el momento todo error es fatal          
- int error(int no)
+/* int error(int no)
 { 
  printf ("\n^ Error %d: Este numero es demasiado grande",no);
  fclose(fp);//cerrar el programa fuente
  exit(1); //estoy en modo de p�nico...cualquier error es fatal
 }
-
+*/
 //inicializar_espec
 //construcci�n de la tabla de tokens para operadores y s�mboles especiales de pl0
 void inicializar_espec()
@@ -41,7 +41,7 @@ void inicializar_espec()
 void imprime_token()
 {
 
- char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","readcar","readcad","readint","readfloat","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","void","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok","printtok","readtok","cadenatok","accmetodo","vstringtok","strlngtok","searchctok","replacetok","parseftok","parimpartok","vinttok","vfloattok","cutdecimaltok","aproxcuttok","partdectok","potenciatok","senotok","cosenotok","tangentetok","pitok","factorialtok","raizcuadtok","combinaciontok","permutaciontok","residuodivtok","vabsolutotok"};
+ char *token_string[]={"nulo","ident","numero","mas","menos","por","barra","igl","nig","mnr","mei","myr","mai","parena","parenc","coma","puntoycoma","punto","asignacion","llavea","llaveac","comillad","comillas","comp","dist","readcar","readcad","readint","readfloat","starttok","endtok","publictok","classtok","iftok","elsetok","switchtok","casetok","defaulttok","breaktok","whiletok","fortok","inttok","floattok","stringtok","chartok","booltok","falsetok","truetok","controltok","steptok","newtok","exctok","printtok","readtok","cadenatok","accmetodo","vstringtok","strlngtok","searchctok","replacetok","parseftok","parimpartok","vinttok","vfloattok","cutdecimaltok","aproxcuttok","partdectok","potenciatok","senotok","cosenotok","tangentetok","pitok","factorialtok","raizcuadtok","combinaciontok","permutaciontok","residuodivtok","vabsolutotok","voidtok","constructortok","returntok"};
  printf("%10s %d",token_string[token],token);
   
 }

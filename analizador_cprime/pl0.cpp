@@ -37,7 +37,7 @@ if (argc!=2)
            
             programa(); 
              
-            while(1) {
+           /* while(1) {
                obtoken();        //en scanner.cpp
                if(token!=nulo){
                     imprime_token();  //en auxiliares.cpp
@@ -47,8 +47,8 @@ if (argc!=2)
                     
                 }	
             } 
-             
-            
+            */ 
+           
             //obtoken();
             //OBJETO(); 
             //EXPRESION(); 
@@ -56,6 +56,8 @@ if (argc!=2)
             //IF();
             //PRINT();
             //WHILE();
+          //  obtoken();
+          //  SWITCH();
             
             //tokenizar el programa fuente
 	    

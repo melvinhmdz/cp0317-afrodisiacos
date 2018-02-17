@@ -1,7 +1,6 @@
-
-
 int error(int);
 
+void RETORNAR();
 void programa();
 void CLAS_DEF();
 void DEC_METODO_MAIN();
@@ -30,7 +29,4 @@ void TERMINO();
 void FACTOR();
 void DEC_VAR_METODOS();
 void DEC_ATRIBUTO();
-
-
-
 
